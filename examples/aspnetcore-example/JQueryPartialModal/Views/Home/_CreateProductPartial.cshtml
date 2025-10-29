@@ -1,0 +1,111 @@
+@model JQueryPartialModal.Models.ProductViewModel
+
+<form asp-action="CreateProduct" method="post" class="needs-validation" novalidate>
+    <div class="container-fluid px-0">
+        <!-- Form Header -->
+        <div class="row mb-3 mb-md-4">
+            <div class="col-12">
+                <div class="alert alert-primary border-0 mb-0" role="alert">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-box-seam fs-4 me-3"></i>
+                        <div>
+                            <h6 class="mb-0 fw-semibold">New Product</h6>
+                            <small class="d-none d-sm-block">Fill in the fields to create a new product</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Fields -->
+        <div class="row g-3 g-md-4">
+            <!-- Product Name -->
+            <div class="col-12">
+                <div class="form-floating">
+                    <input asp-for="Name" 
+                           class="form-control" 
+                           id="productName"
+                           placeholder="Product name" 
+                           required />
+                    <label asp-for="Name" for="productName">
+                        <i class="bi bi-tag"></i> Product Name
+                    </label>
+                    <span asp-validation-for="Name" class="text-danger small mt-1 d-block"></span>
+                    <div class="form-text">
+                        <small>
+                            <i class="bi bi-info-circle"></i> 
+                            <span class="d-none d-sm-inline">Enter a descriptive name for the product</span>
+                            <span class="d-inline d-sm-none">Product name</span>
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Price -->
+            <div class="col-12 col-sm-6">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text bg-light">
+                        <i class="bi bi-currency-dollar"></i>
+                    </span>
+                    <div class="form-floating flex-grow-1">
+                        <input asp-for="Price" 
+                               type="number" 
+                               step="0.10" 
+                               min="0"
+                               class="form-control" 
+                               id="productPrice"
+                               placeholder="0.00" 
+                               required />
+                        <label asp-for="Price" for="productPrice">Price</label>
+                    </div>
+                </div>
+                <span asp-validation-for="Price" class="text-danger small mt-1 d-block"></span>
+                <div class="form-text">
+                    <small>
+                        <i class="bi bi-cash"></i> Price in USD
+                    </small>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="col-12 col-sm-6">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body py-2 py-sm-3">
+                        <h6 class="card-title small text-muted mb-2">
+                            <i class="bi bi-lightbulb"></i> Tip
+                        </h6>
+                        <p class="card-text small mb-0">
+                            All marked fields are required
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Summary (visible on larger screens) -->
+        <div class="row mt-3 d-none d-md-block">
+            <div class="col-12">
+                <div class="border-top pt-3">
+                    <small class="text-muted">
+                        <i class="bi bi-check-circle"></i> 
+                        All fields are required to create the product
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer content (moved to modal footer by plugin) -->
+    <div class="modal-footer-content d-none">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <i class="bi bi-x-circle"></i> 
+            <span class="d-none d-sm-inline">Cancel</span>
+            <span class="d-inline d-sm-none">Close</span>
+        </button>
+        <button type="submit" class="btn btn-primary">
+            <i class="bi bi-check-circle"></i> 
+            <span class="d-none d-sm-inline">Create Product</span>
+            <span class="d-inline d-sm-none">Create</span>
+        </button>
+    </div>
+</form>

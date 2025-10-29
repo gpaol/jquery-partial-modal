@@ -1,0 +1,88 @@
+@model JQueryPartialModal.Models.UserViewModel
+
+<div class="container-fluid px-0">
+    <!-- User Profile Card -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-3 p-md-4">
+            <!-- User Header -->
+            <div class="row mb-3 mb-md-4">
+                <div class="col-12 text-center">
+                    <div class="bg-primary bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                         style="width: 80px; height: 80px;">
+                        <i class="bi bi-person-fill text-white" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <h4 class="mb-1">@Model.Name</h4>
+                    <p class="text-muted small mb-0">
+                        <i class="bi bi-envelope"></i> @Model.Email
+                    </p>
+                </div>
+            </div>
+
+            <!-- User Details -->
+            <div class="row g-3">
+                <div class="col-12">
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item px-0 py-3 border-top">
+                            <div class="row align-items-center">
+                                <div class="col-5 col-sm-4 col-md-3">
+                                    <strong class="text-muted small">
+                                        <i class="bi bi-hash"></i> User ID
+                                    </strong>
+                                </div>
+                                <div class="col-7 col-sm-8 col-md-9">
+                                    <span class="badge bg-primary rounded-pill">@Model.Id</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item px-0 py-3">
+                            <div class="row align-items-center">
+                                <div class="col-5 col-sm-4 col-md-3">
+                                    <strong class="text-muted small">
+                                        <i class="bi bi-person"></i> Name
+                                    </strong>
+                                </div>
+                                <div class="col-7 col-sm-8 col-md-9">
+                                    <span class="fs-6">@Model.Name</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item px-0 py-3">
+                            <div class="row align-items-center">
+                                <div class="col-5 col-sm-4 col-md-3">
+                                    <strong class="text-muted small">
+                                        <i class="bi bi-envelope"></i> Email
+                                    </strong>
+                                </div>
+                                <div class="col-7 col-sm-8 col-md-9">
+                                    <a href="mailto:@Model.Email" class="text-decoration-none">
+                                        <span class="text-break">@Model.Email</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info Badge -->
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="alert alert-info mb-0 py-2 px-3" role="alert">
+                        <small>
+                            <i class="bi bi-info-circle"></i> 
+                            <span class="d-none d-sm-inline">Full user profile view loaded dynamically</span>
+                            <span class="d-inline d-sm-none">User profile</span>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer content (moved to modal footer by plugin) -->
+    <div class="modal-footer-content d-none">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <i class="bi bi-x-circle"></i> Close
+        </button>
+    </div>
+</div>

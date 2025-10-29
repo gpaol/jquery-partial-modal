@@ -1,0 +1,41 @@
+{
+  "name": "jquery-partial-modal",
+  "version": "1.0.0",
+  "description": "A jQuery plugin to seamlessly load Bootstrap modals with ASP.NET Core partial views",
+  "main": "dist/jquery-partial-modal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpaol/jquery-partial-modal.git"
+  },
+  "keywords": [
+    "jquery",
+    "bootstrap",
+    "modal",
+    "aspnetcore",
+    "partial-view",
+    "ajax",
+    "form",
+    "validation",
+    "bootstrap5"
+  ],
+  "author": "Paolo Gaetano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gpaol/jquery-partial-modal/issues"
+  },
+  "homepage": "https://github.com/gpaol/jquery-partial-modal#readme",
+  "peerDependencies": {
+    "jquery": ">=3.0.0",
+    "bootstrap": ">=5.0.0"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ]
+}
